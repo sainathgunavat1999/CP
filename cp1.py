@@ -10,3 +10,4 @@ while(n != 1):
         b.append(n)
 
 print(b)
+# shubham jadhao
