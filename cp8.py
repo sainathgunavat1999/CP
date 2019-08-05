@@ -7,3 +7,4 @@ for i in range(1,a+1):
         height = 2*height
 
 print(height)
+# shubham jadhao
