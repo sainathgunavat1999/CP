@@ -1,0 +1,30 @@
+n=int(input())#no of inputs
+numbers=[]#list for storing no
+for i in range(n):
+    numbers.append(int(input()))
+
+y=""#variable to add empty space infront of reversed no
+iterations=[]#list to store no of iterations
+
+
+for i in range(n):
+    
+    a=str(numbers[i])#accessing variable in string coz number cannot be reversed directly
+    b=(list(reversed(a)))#listing the number
+    b=y.join(b)#unlisting the number
+    count=0#to count no of iterations of additions that took place
+    while(a!=b):#if no and its reverse is nt equal toh palindrome nai hai toh process krna padega
+        numbers[i]=int(a)+int(b)#converting string no in int format and adding no
+        #same reverse process as of above
+        a=str(numbers[i])
+        b=(list(reversed(a)))
+        b=y.join(b)
+        count=count+1
+        
+    iterations.append(count)   
+
+
+#printing output
+for i in range(n):
+    print(iterations[i],end=" ")
+    print(numbers[i])

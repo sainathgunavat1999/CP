@@ -1,0 +1,24 @@
+lst=[]
+lst1=[]
+a=1
+an=1
+b=2
+bn=2
+lst.append(a)
+lst.append(b)
+lst1.append(an)
+lst1.append(bn)
+
+
+n=int(input())
+for i in range(1,10000000):
+    lst.append(i+2)
+    rr=lst1[i]
+    ss=(i+2)-lst1[rr-1]
+    tt=1+lst1[ss-1]
+    lst1.append(tt)
+    if(i==n):
+        print(tt)
+        break
+    
+    

@@ -1,0 +1,35 @@
+num="" #To start loop and stop on desired input
+breaking="0 0"#Desired input to stop
+frstnum=[]#list for first num
+scndnum=[]#list for second num
+while(num!=breaking):#Loop for input
+    num=input()
+    x,y=num.split()#splitting input on space
+    frstnum.append(int(x))
+    scndnum.append(int(y))
+    
+
+frstnum.pop()#Deleting the 0 which was the last input
+scndnum.pop()#Deleting the 0 which was the last input
+
+carry1=[]#List for no of carries each comparison
+i=0
+for i in range(len(frstnum)):
+    carry=0
+    a=str(frstnum[i])
+    for j in range(len(a)):
+        x=frstnum[i]%10
+        y=scndnum[i]%10
+        frstnum[i]=int(frstnum[i]/10)
+        scndnum[i]=int(scndnum[i]/10)
+        if(x+y>9):#if addition of 2 digits is greater than 9 carry occures
+            carry=carry+1
+    
+    carry1.append(carry)        
+
+
+for i in (carry1):
+    if(i==0):
+        print("No carry operation.")
+    else:
+        print(i,"carry operation.")

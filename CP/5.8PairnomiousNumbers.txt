@@ -1,0 +1,9 @@
+nip=list(map(int,input().split()))
+n=nip[0]
+ip=nip[1:]
+ans=[]
+ans.append((ip[0]+ip[1]-ip[2])//2)#Finding 1st element
+for i in range(0,n-1):
+    ans.append(ip[i]-ans[0])#Finding rest of elements
+    
+print(sorted(ans))

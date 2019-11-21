@@ -1,0 +1,29 @@
+from random import randint
+
+lst = []
+for i in range(3):
+    a = int(input())
+    lst.append(a)
+
+
+def Ollie(n,tot):
+    p=randint(2,9)
+    tot=tot*p
+    if(tot>n):
+        print("Ollie wins.")
+    else:
+        Stan(n,tot)
+
+
+def Stan(n,tot):
+    p = randint(2, 9)
+    tot = tot * p
+    if (tot > n):
+        print("Stan wins.")
+    else:
+        Ollie(n, tot)
+
+for i in range(len(lst)):
+    tot=1
+    Ollie(lst[i],tot)
+

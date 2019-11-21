@@ -1,0 +1,22 @@
+def num_expressions(pairs, depth, mem):
+   
+    if (pairs, depth) in mem:
+        return mem[pairs, depth]
+    if pairs == 0 or depth ==1:
+        mem[pairs, depth] = 1
+        return 1
+
+    total = 0
+    for i in range(pairs):
+        total += num_expressions(i, depth - 1, mem) * num_expressions(pairs - 1 - i, depth, mem)
+    mem[pairs,depth] = total
+    return total
+
+
+
+    
+mem = {}
+n, d =[int(n) for n in input().split()]
+        
+nexp = num_expressions(n//2, d, mem) - num_expressions(n//2, d-1, mem)
+print(nexp)

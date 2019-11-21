@@ -1,0 +1,23 @@
+m,n=map(int,input().split())
+pre_m=0
+pre_n=1
+next_m=1
+next_n=0
+lst=[]
+
+while True:
+    mid_m=pre_m+next_m
+    mid_n=pre_n+next_n
+    if(mid_m==m and mid_n==n):
+        break
+    else:
+        if(mid_m*n>mid_n*m):
+            lst.append('L')
+            next_m=mid_m
+            next_n=mid_n
+        else:
+            lst.append('R')
+            pre_m=mid_m
+            pre_n=mid_n
+
+print(*lst)

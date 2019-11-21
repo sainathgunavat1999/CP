@@ -1,0 +1,19 @@
+iterations=[]
+t=int(input())
+t1=t
+while(t):
+    t=t-1
+    n=int(input())
+    p=len(str(n))
+    for i in range(30):
+        q=2**i
+        q=str(q)
+        #print(q[:p],q[p:])
+        if(q[:p] == str(n) and len(q[:p]) < len(q[p:])):
+            iterations.append(i)
+            break;
+i=0        
+while(i<t1):
+    print(iterations[i])
+    i=i+1
+    

@@ -1,0 +1,17 @@
+lst1=[]
+for i in range(2):
+    n,k=map(int,input().split())
+    lst=[int(i) for i in input().split()][:k]
+    prod=1
+    for i in range(1,n+1):
+        prod=prod*i
+    #print(prod)
+    for i in range(len(lst)):
+        try:
+            result=prod//lst[i]
+        except:
+            continue
+    lst1.append(result)
+
+for i in lst1:
+    print(i)

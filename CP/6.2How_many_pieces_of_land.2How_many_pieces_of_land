@@ -1,0 +1,9 @@
+m=int(input())
+lst=[]
+for i in range(m):
+    n=int(input())
+    ans=((n*(n-1))//2)+((n*(n-1)*(n-2)*(n-3))//24)+1
+    lst.append(ans)
+
+for i in lst:
+    print(i)

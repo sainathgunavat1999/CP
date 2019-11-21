@@ -1,0 +1,23 @@
+lst=[]
+while True:
+    m,n=map(int,input().split())
+    if(m==0 and n==0):
+        break
+    else:
+        a=0
+        b=1
+        count=0
+        while True:
+            c=a+b
+            a,b=b,c
+            #print('While k andar')
+            if(c>=m and c<=n):
+                #print('If k andar')
+                
+                #print(c)
+                count+=1
+            elif(c>100):
+                break
+        lst.append(count)
+
+print(lst)
